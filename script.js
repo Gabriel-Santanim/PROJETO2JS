@@ -1,7 +1,7 @@
 let alunos = [];
 
 document.getElementById("btnCadastrar").addEventListener("click", cadastrarAlunos);
-//document.getElementById("btnFiltrarMelhor").addEventListener("click", filtrarMelhor);
+document.getElementById("btnFiltrarMelhor").addEventListener("click", filtrarMelhor);
 document.getElementById("btnFiltrarMelhorNotas").addEventListener("click", filtrarMelhoresNotas);
 
 function cadastrarAlunos() {
@@ -45,10 +45,10 @@ function filtrarMelhoresNotas() {
 
     exibirAlunos(resultado);
 }
-//function filtrarMelhor() {  
-//    let resultado = alunos.filter(f => f.media >= 7);
-//    exibirAlunos(resultado);
-//}
+function filtrarMelhor() {  
+    let resultado = alunos.filter(f => f.media >= 7);
+    exibirAlunos(resultado);
+}
 
 function limparCampos() {
     document.getElementById("nome").value = "";
